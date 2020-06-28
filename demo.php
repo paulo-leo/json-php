@@ -2,7 +2,7 @@
     /*Exemplo de uso da classe*/
     include('Json.php');
     
-    $file = 'app.json';
+    $file = 'demo.json';
 
     $json = new Json($file);
 
