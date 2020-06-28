@@ -12,7 +12,7 @@ A classe ler um arquivo com formato ou extensão JSON e o converte para um array
 Exemplo de instanciação da classse:
  
 $file =  “produtos.json”;
-
+-----------------------------------------------------------
 $json = new Json($file); ou  $json = Json::url($file);
 -----------------------------------------------------------
 Lendo arquivos de url externas, exemplo com POKEMON API
@@ -71,7 +71,6 @@ Substitui o array atual por um novo. A troca ou substituição é total.
 Retorna true no caso de sucesso e false no caso de falha.
 
 Exemplo: $json->replace(['telefone'=>'21565588']);
-
 -----------------------------------------------------------
 save(boolean opcional defaut false) : boolean | bits 
 
@@ -81,13 +80,13 @@ Retorna false no caso de falha ou o número de bits que foram salvos no arquivo.
 O arqumento é um boolean, true para saída formatada ou false para saída não formatada. 
 
 Exemplo: $json->save(); ou $json->save(true);
-
-OBS: caso o array do json deriva de uma URL externa ao qual não há arquivo vinculado no seu computador. Você deve usar o método "create" e informar o nome do diretório para salvar criar e salvar o arquivo json.
+-----------------------------------------------------------
+OBS: caso o array do json deriva de uma URL externa ao qual não há arquivo vinculado no seu computador. Você deve usar o método "create" e informar o nome do diretório para criar e salvar o arquivo json local.
 
 $local = 'minha-pasta/pokemon.json'
 
 Exemplo: $json->create($local);
-
+-----------------------------------------------------------
 Você também pode passar mais dois parâmetros que são opcionais.
 
 string file : nome do arquivo com o seu diretório
@@ -97,8 +96,8 @@ boolean output : saída formata ou não.
 boolean sob : sobrescrita do arquivo caso exista um arquivo com o mesmo nome no diretório infomado no primeiro parâmetro. 
 
 Exemplo: $json->create('pokemon.json', true, true);
-
+-----------------------------------------------------------
 E por último o método delete que deleta um arquivo json local caso ele exista. O retetono dessa função é true no caso de sucesso e false no caso de falha. 
 
 Exemplo: $json->delete('pokemon.json');
-
+-----------------------------------------------------------
